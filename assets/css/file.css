@@ -1,0 +1,13 @@
+input[type="file"]{
+    display:none;
+}
+.custom-file-upload{
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    
+    background-position: cover;
+    background-size: cover;
+    cursor: pointer;
+}
