@@ -1,7 +1,7 @@
 
 <?php
     session_start();
-    include "../classes/autoloader2.php";
+    include "./classes/autoloader2.php";
     if(isset($_SESSION['rgc_userid']) && is_numeric($_SESSION['rgc_userid'])){
       $user_id = $_SESSION['rgc_userid'];
       $login = new Login();
@@ -45,7 +45,7 @@
   <!-- CSS Files -->
   <link id="pagestyle" href="../assets/css/soft-ui-dashboard.css?v=1.0.3" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/css/image.css">
-  <link rel="stylesheet" href="../fontawe/css/all.css">
+  <link rel="stylesheet" href="../assets/css/file.css">
 </head>
 
 <body class="g-sidenav-show bg-gray-100">
@@ -57,9 +57,9 @@
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 ps-2 me-sm-6 me-5">
             <li class="breadcrumb-item text-sm"><a class="text-white opacity-5" href="javascript:;">Pages</a></li>
-            <li class="breadcrumb-item text-sm text-white active" aria-current="page">Profile</li>
+            <li class="breadcrumb-item text-sm text-white active" aria-current="page">Project</li>
           </ol>
-          <h6 class="text-white font-weight-bolder ms-2">Profile</h6>
+          <h6 class="text-white font-weight-bolder ms-2">Project</h6>
         </nav>
         <div class="collapse navbar-collapse me-md-0 me-sm-4 mt-sm-0 mt-2" id="navbar">
           <div class="ms-md-auto pe-md-3 d-flex align-items-center">
@@ -190,168 +190,88 @@
               </p>
             </div>
           </div>
-         
+          <div class="col-lg-4 col-md-6 my-sm-auto ms-sm-auto me-sm-0 mx-auto mt-3">
+            <div class="nav-wrapper position-relative end-0">
+             
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <div class="container-fluid py-4">
       <div class="row">
-        <div class="col-md-7 col-12 col-xl-4">
+        <div class="col-md-9 col-12 col-xl-8 mx-auto">
           <div class="card h-100">
             <div class="card-header pb-0 p-3">
-              <h6 class="mb-0">Platform Settings</h6>
+              <h6 class="mb-0">Post A New Project</h6>
             </div>
             <div class="card-body p-3">
-              
-              
-              <h6 class="text-uppercase text-body text-xs font-weight-bolder mt-4">Application</h6>
-              <ul class="list-group">
-                <li class="list-group-item border-0 px-0">
-                  <div class="form-check form-switch ps-0">
-                    <input class="form-check-input ms-auto" type="checkbox" id="flexSwitchCheckDefault3">
-                    <label class="form-check-label text-body ms-3 text-truncate w-80 mb-0" for="flexSwitchCheckDefault3">New launches and projects</label>
-                  </div>
-                </li>
-                <li class="list-group-item border-0 px-0">
-                  <div class="form-check form-switch ps-0">
-                    <input class="form-check-input ms-auto" type="checkbox" id="flexSwitchCheckDefault4" checked>
-                    <label class="form-check-label text-body ms-3 text-truncate w-80 mb-0" for="flexSwitchCheckDefault4">Monthly product updates</label>
-                  </div>
-                </li>
-                <li class="list-group-item border-0 px-0 pb-0">
-                  <div class="form-check form-switch ps-0">
-                    <input class="form-check-input ms-auto" type="checkbox" id="flexSwitchCheckDefault5">
-                    <label class="form-check-label text-body ms-3 text-truncate w-80 mb-0" for="flexSwitchCheckDefault5">Subscribe to newsletter</label>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-7 col-12 col-xl-4">
-          <div class="card h-100">
-            <div class="card-header pb-0 p-3">
-              <div class="row">
-                <div class="col-md-8 d-flex align-items-center">
-                  <h6 class="mb-0">Profile Information</h6>
-                </div>
-                <div class="col-md-4 text-end">
-                  <a href="./change-profile.php">
-                    <i class="fas fa-user-edit text-secondary text-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit Profile"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="card-body p-3">
-              <p class="text-sm">
+            <form role="text-left" method="POST" enctype="multipart/form-data">
                 <?php
-                  $userid = $_SESSION['rgc_userid'];
-                  $user = new User();
-                  $ROW_USER = $user->get_user($userid);
-                  if($ROW_USER){
-                    echo $ROW_USER['profile_detail'];
-                  }
-                ?>  
-              </p>
-              <hr class="horizontal gray-light my-4">
-              <ul class="list-group">
-                <li class="list-group-item border-0 ps-0 pt-0 text-sm"><strong class="text-dark">Full Name:</strong> &nbsp; <?php echo $ROW_USER['username']?></li>
-                <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Mobile:</strong> &nbsp; (254) <?php echo $ROW_USER['phone_no']?></li>
-                <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Email:</strong> &nbsp; <?php echo $ROW_USER['email']?></li>
-                <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Location:</strong> &nbsp; KENYA</li>
-                <li class="list-group-item border-0 ps-0 pb-0">
-                  <strong class="text-dark text-sm">Social:</strong> &nbsp;
-                  <a class="btn btn-facebook btn-simple mb-0 ps-1 pe-2 py-0" href="javascript:;">
-                    <i class="fab fa-facebook fa-lg"></i>
-                  </a>
-                  <a class="btn btn-twitter btn-simple mb-0 ps-1 pe-2 py-0" href="javascript:;">
-                    <i class="fab fa-twitter fa-lg"></i>
-                  </a>
-                  <a class="btn btn-instagram btn-simple mb-0 ps-1 pe-2 py-0" href="javascript:;">
-                    <i class="fab fa-instagram fa-lg"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-7 col-12 col-xl-4">
-          <div class="card h-100">
-            <div class="card-header pb-0 p-3">
-              <h6 class="mb-0">Conversations</h6>
-            </div>
-            <div class="card-body p-3">
-              <ul class="list-group">
-                <li class="list-group-item border-0 d-flex align-items-center px-0 mb-2">
-                  <div class="avatar me-3">
-                    <img src="../assets/img/kal-visuals-square.jpg" alt="kal" class="border-radius-lg shadow">
-                  </div>
-                  <div class="d-flex align-items-start flex-column justify-content-center">
-                    <h6 class="mb-0 text-sm">Sophie B.</h6>
-                    <p class="mb-0 text-xs">Hi! I need more information..</p>
-                  </div>
-                  <a class="btn btn-link pe-3 ps-0 mb-0 ms-auto" href="javascript:;">Reply</a>
-                </li>
-                <li class="list-group-item border-0 d-flex align-items-center px-0 mb-2">
-                  <div class="avatar me-3">
-                    <img src="../assets/img/marie.jpg" alt="kal" class="border-radius-lg shadow">
-                  </div>
-                  <div class="d-flex align-items-start flex-column justify-content-center">
-                    <h6 class="mb-0 text-sm">Anne Marie</h6>
-                    <p class="mb-0 text-xs">Awesome work, can you..</p>
-                  </div>
-                  <a class="btn btn-link pe-3 ps-0 mb-0 ms-auto" href="javascript:;">Reply</a>
-                </li>
-                <li class="list-group-item border-0 d-flex align-items-center px-0 mb-2">
-                  <div class="avatar me-3">
-                    <img src="../assets/img/ivana-square.jpg" alt="kal" class="border-radius-lg shadow">
-                  </div>
-                  <div class="d-flex align-items-start flex-column justify-content-center">
-                    <h6 class="mb-0 text-sm">Ivanna</h6>
-                    <p class="mb-0 text-xs">About files I can..</p>
-                  </div>
-                  <a class="btn btn-link pe-3 ps-0 mb-0 ms-auto" href="javascript:;">Reply</a>
-                </li>
-                <li class="list-group-item border-0 d-flex align-items-center px-0 mb-2">
-                  <div class="avatar me-3">
-                    <img src="../assets/img/team-4.jpg" alt="kal" class="border-radius-lg shadow">
-                  </div>
-                  <div class="d-flex align-items-start flex-column justify-content-center">
-                    <h6 class="mb-0 text-sm">Peterson</h6>
-                    <p class="mb-0 text-xs">Have a great afternoon..</p>
-                  </div>
-                  <a class="btn btn-link pe-3 ps-0 mb-0 ms-auto" href="javascript:;">Reply</a>
-                </li>
-                <li class="list-group-item border-0 d-flex align-items-center px-0">
-                  <div class="avatar me-3">
-                    <img src="../assets/img/team-3.jpg" alt="kal" class="border-radius-lg shadow">
-                  </div>
-                  <div class="d-flex align-items-start flex-column justify-content-center">
-                    <h6 class="mb-0 text-sm">Nick Daniel</h6>
-                    <p class="mb-0 text-xs">Hi! I need more information..</p>
-                  </div>
-                  <a class="btn btn-link pe-3 ps-0 mb-0 ms-auto" href="javascript:;">Reply</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 mt-4">
-          <div class="card mb-4">
-            <div class="card-header pb-0 p-3">
-              <h6 class="mb-1">Projects</h6>
-              <p class="text-sm">Architects design houses</p>
-            </div>
-            <div class="card-body p-3">
-              <div id="cart_details" class="row">
+                    if($_SERVER['REQUEST_METHOD'] == "POST"){
+                       
+                    
+                 
+                            
+                       
+                             
+
+                        $userid = $_SESSION['rgc_userid'];
+                        $project = new Post();
+                        $result = $project->create_post($userid, $_POST, $_FILES);
+                        if($result != ""){
+                            echo "<div class='col-9 w-100 ms-auto px-1 ' style='border-radius:10px;background-color:red; color:white; height:100%; font-size:10px; text-align:center; display:flex; align-items:center; justify-content:center;'>
                 
+                        <p> {$result}</p>
+                        
+                        </div>";
+                        }else{
+                            echo "<div class='col-9 w-100 ms-auto px-1 ' style='border-radius:10px;background-color:green; color:white; height:100%; font-size:10px; text-align:center; display:flex; align-items:center; justify-content:center;'>
                 
-              
-              </div>
-              <span class="total_projects"></span>
+                        <p> posted succesfully</p>
+                        
+                        </div>";
+                        }
+                    }
+                    
+                ?>
+                <label >Post Title</label>
+                <div class="mb-3">
+                  <input type="text" name="ptitle" class="form-control" placeholder="Post Title" aria-label="Name" aria-describedby="email-addon">
+                </div>
+                <label >Description</label>
+                <div class="mb-3">
+                  <input type="text" name="pdesc" class="form-control" placeholder="Post Description" aria-label="Email" aria-describedby="email-addon">
+                </div>
+                
+                <label>Category</label>
+                <div class="mb-3">
+                  <select name="category" class="form-control" >
+                    <option>Men</option>
+                    <option>Women</option>
+                    <option>Youth</option>
+                    <option>Sunday School</option>
+                    <option>All</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                      <h4 style="font-size:14px;">Upload An Image</h4>
+                      <Label for="file-upload" class="custom-file-upload" style="background-image:url('../assets/img/default-avatar.jpg');"></Label>
+                      <div >
+                        <input type="file" name="file" id="file-upload">
+                      </div>
+                    </div>
+                
+                <div class="text-center">
+                  <button type="submit" class="btn bg-gradient-dark w-100 my-4 mb-2">Post</button>
+                </div>
+                
+              </form>
             </div>
           </div>
         </div>
+        
+        
       </div>
       <footer class="footer pt-3  ">
         <div class="container-fluid">
@@ -452,20 +372,6 @@
   <script src="../assets/js/core/bootstrap.min.js"></script>
   <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
   <script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
-  <script>
-    $(document).ready(function(){
-      load_cart_data();
-      function load_cart_data(){
-        url:"../classes/fetch_cart.php",
-        method:"POST",
-        dataType:"json",
-        success:function(data){
-          $('#cart_details').html(data.cart_details);
-          $('.total_projects').text(data.total_item);
-        }
-      }
-    });
-  </script>
   <script>
     var win = navigator.platform.indexOf('Win') > -1;
     if (win && document.querySelector('#sidenav-scrollbar')) {

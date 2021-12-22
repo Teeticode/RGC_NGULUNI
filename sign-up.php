@@ -77,7 +77,7 @@
             </div>
             <div class="row px-xl-5 px-sm-4 px-3">
             <?php
-                include "../classes/autoloader2.php";
+                include "./classes/autoloader2.php";
                 $usname = "";
                 $email = "";
                 $psd="";

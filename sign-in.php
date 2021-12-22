@@ -85,7 +85,7 @@
                 
                   <form role="form" method="POST">
                   <?php
-                    include "../classes/autoloader2.php";
+                    include "./classes/autoloader2.php";
                    
                     $email = "";
                     $psd="";

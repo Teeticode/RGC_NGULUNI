@@ -12,7 +12,7 @@
       <ul class="navbar-nav">
       
         <li class="nav-item">
-          <a class="nav-link  <?php if($_SERVER['REQUEST_URI'] === "/RGC-DASHBOARD/pages/index.php"){
+          <a class="nav-link  <?php if($_SERVER['REQUEST_URI'] === "/RGC-DASHBOARD/index.php"){
                                       echo 'active';   
                                     }      
             ?>" href="../pages/index.php">
@@ -35,7 +35,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link <?php if($_SERVER['REQUEST_URI'] === "/RGC-DASHBOARD/pages/tables.php"){
+          <a class="nav-link <?php if($_SERVER['REQUEST_URI'] === "/RGC-DASHBOARD/tables.php"){
                                       echo 'active';   
                                     }      
             ?> " href="../pages/tables.php">
@@ -58,7 +58,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link <?php if($_SERVER['REQUEST_URI'] === "/RGC-DASHBOARD/pages/billing.php"){
+          <a class="nav-link <?php if($_SERVER['REQUEST_URI'] === "/RGC-DASHBOARD/billing.php"){
                                       echo 'active';   
                                     }      
             ?> " href="../pages/billing.php">

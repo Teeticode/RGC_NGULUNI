@@ -1,5 +1,5 @@
 <?php
-    include("../classes/autoloader2.php");
+    include("./classes/autoloader2.php");
     session_start();
      if(isset($_POST['react'])){
         $userid = $_SESSION['rgc_userid'];

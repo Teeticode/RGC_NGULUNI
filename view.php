@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include "../classes/autoloader2.php";
+    include "./classes/autoloader2.php";
     if(isset($_SESSION['rgc_userid']) && is_numeric($_SESSION['rgc_userid'])){
       $user_id = $_SESSION['rgc_userid'];
       $login = new Login();

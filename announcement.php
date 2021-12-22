@@ -1,7 +1,7 @@
 
 <?php
     session_start();
-    include "../classes/autoloader2.php";
+    include "./classes/autoloader2.php";
     if(isset($_SESSION['rgc_userid']) && is_numeric($_SESSION['rgc_userid'])){
       $user_id = $_SESSION['rgc_userid'];
       $login = new Login();
@@ -217,8 +217,8 @@
                              
 
                         $userid = $_SESSION['rgc_userid'];
-                        $project = new Post();
-                        $result = $project->create_post($userid, $_POST, $_FILES);
+                        $ann = new Announcement();
+                        $result = $ann->create_post($userid, $_POST, $_FILES);
                         if($result != ""){
                             echo "<div class='col-9 w-100 ms-auto px-1 ' style='border-radius:10px;background-color:red; color:white; height:100%; font-size:10px; text-align:center; display:flex; align-items:center; justify-content:center;'>
                 
@@ -231,6 +231,8 @@
                         <p> posted succesfully</p>
                         
                         </div>";
+                        
+
                         }
                     }
                     
@@ -263,7 +265,7 @@
                     </div>
                 
                 <div class="text-center">
-                  <button type="submit" class="btn bg-gradient-dark w-100 my-4 mb-2">Post</button>
+                  <button type="submit" class="btn bg-gradient-dark w-100 my-4 mb-2"><a href="javascript:confirmRefresh();">Post</a></button>
                 </div>
                 
               </form>
@@ -380,6 +382,12 @@
       }
       Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
     }
+    function confirmRefresh(){
+    var okToRefresh = confirm("Do you Really want to delete this Post?");
+    if(okToRefresh){
+      setTimeout("location.reload(true);", 1500);
+    }
+  }
   </script>
   <!-- Github buttons -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
