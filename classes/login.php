@@ -6,7 +6,12 @@
             $email = addslashes($data['email']);
             $psd = addslashes($data['psd']);
             $query = "select * from users where email = '$email' limit 1"; 
-            
+            if(empty($email)){
+                $this->error .= "Email is empty!! <br>";
+            }
+            if(empty($psd)){
+                $this->error .= "Password is empty!! <br>";
+            }
             $DB = new Database();
             $result = $DB->read($query);
             if($result){
