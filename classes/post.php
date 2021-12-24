@@ -9,7 +9,7 @@
                 if($_FILES['file']['name'] !== "" ){
                   
                     
-                        $folder = "../uploads/";
+                        $folder = "./uploads/";
                         if(!file_exists($folder)){
                             mkdir($folder, 0777, true);
                         }
@@ -28,9 +28,9 @@
                              
 
                 }
-                    $ptitle = addslashes($data['ptitle']);
-                    $pdesc = addslashes($data['pdesc']);
-                    $category = addslashes($data['category']);
+                    $ptitle = addslashes(mysqli_real_escape_string($DB->connect(),$data['ptitle']));
+                    $pdesc = addslashes(mysqli_real_escape_string($DB->connect(),$data['pdesc']));
+                    $category = addslashes(mysqli_real_escape_string($DB->connect(),$data['category']));
                     $postid = $this -> create_postid();
                     $query="insert into project(postid,userid,post,pdesc,image,has_image,category	
                     )

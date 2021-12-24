@@ -13,13 +13,13 @@
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
   <!-- Nucleo Icons -->
-  <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
-  <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+  <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
   <!-- Font Awesome Icons -->
   <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-  <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+  <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
   <!-- CSS Files -->
-  <link id="pagestyle" href="../assets/css/soft-ui-dashboard.css?v=1.0.3" rel="stylesheet" />
+  <link id="pagestyle" href="./assets/css/soft-ui-dashboard.css?v=1.0.3" rel="stylesheet" />
 </head>
 
 <body class="g-sidenav-show  bg-gray-100">
@@ -57,7 +57,7 @@
   </nav>
   <!-- End Navbar -->
   <section class="min-vh-100 mb-8">
-    <div class="page-header align-items-start min-vh-50 pt-5 pb-11 m-3 border-radius-lg" style="background-image: url('../assets/img/curved-images/curved14.jpg');">
+    <div class="page-header align-items-start min-vh-50 pt-5 pb-11 m-3 border-radius-lg" style="background-image: url('./assets/img/curved-images/curved14.jpg');">
       <span class="mask bg-gradient-dark opacity-6"></span>
       <div class="container">
         <div class="row justify-content-center">
@@ -128,6 +128,13 @@
                     <option>Female</option>
                   </select>
                 </div>
+                <div class="mb-3">
+                  <select type="password" name="group" class="form-control" >
+                    <option>Youth</option>
+                    <option>Men</option>
+                    <option>Women</option>
+                  </select>
+                </div>
                 <div class="form-check form-check-info text-left">
                   <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
                   <label class="form-check-label" for="flexCheckDefault">
@@ -137,7 +144,7 @@
                 <div class="text-center">
                   <button type="submit" class="btn bg-gradient-dark w-100 my-4 mb-2">Sign up</button>
                 </div>
-                <p class="text-sm mt-3 mb-0">Already have an account? <a href="./sign-up.php" class="text-dark font-weight-bolder">Sign in</a></p>
+                <p class="text-sm mt-3 mb-0">Already have an account? <a href="./sign-in.php" class="text-dark font-weight-bolder">Sign in</a></p>
               </form>
             </div>
           </div>
@@ -200,10 +207,11 @@
   </footer>
   <!-- -------- END FOOTER 3 w/ COMPANY DESCRIPTION WITH LINKS & SOCIAL ICONS & COPYRIGHT ------- -->
   <!--   Core JS Files   -->
-  <script src="../assets/js/core/popper.min.js"></script>
-  <script src="../assets/js/core/bootstrap.min.js"></script>
-  <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
-  <script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
+  <script type="text/javascript" src="./assets/js/jquery.min.js"></script>
+  <script type="text/javascript" src="./assets/js/core/popper.min.js"></script>
+  <script type="text/javascript" src="./assets/js/core/bootstrap.min.js"></script>
+  <script type="text/javascript" src="./assets/js/plugins/perfect-scrollbar.min.js"></script>
+  <script type="text/javascript" src="./assets/js/plugins/smooth-scrollbar.min.js"></script>
   <script>
     var win = navigator.platform.indexOf('Win') > -1;
     if (win && document.querySelector('#sidenav-scrollbar')) {

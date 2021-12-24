@@ -3,8 +3,9 @@
     class Login{
         private $error = "";
         public function evaluate($data){
-            $email = addslashes($data['email']);
-            $psd = addslashes($data['psd']);
+            $DB = new Database();
+            $email = addslashes(mysqli_real_escape_string($DB->connect(),$data['email']));
+            $psd = addslashes(mysqli_real_escape_string($DB->connect(),$data['psd']));
             $query = "select * from users where email = '$email' limit 1"; 
             if(empty($email)){
                 $this->error .= "Email is empty!! <br>";

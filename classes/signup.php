@@ -27,7 +27,8 @@
                     if (!filter_var($value, FILTER_VALIDATE_EMAIL)) {
                         $this->error = $this->error . $key . " format invalid<br>";
                     }else{
-                        $this -> evaluate_email($value);
+                        $DB = new Database();
+                        $this -> evaluate_email(mysqli_real_escape_string($DB->connect(), $value));
                     }      
                 }
 
@@ -50,26 +51,23 @@
             }
         }
         public function create_user($data){
-            $name = ucfirst($data['usname']);
-            $email = $data['email'];
-            $psd = $data['psd'];
-            $psd2 = $data['psd2'];
+            $DB = new Database();
+            
+            $name = ucfirst(mysqli_real_escape_string($DB->connect(),$data['usname']));
+            $email = mysqli_real_escape_string($DB->connect(),$data['email']);
+            $psd = mysqli_real_escape_string($DB->connect(),$data['psd']);
+            $psd2 = mysqli_real_escape_string($DB->connect(),$data['psd2']);
             $psd_hash = $this->hash_psd($psd);
             
-            $gender = $data['gender'];
+            $gender = mysqli_real_escape_string($DB->connect(),$data['gender']);
             $bod = $data['bod'];
-            $category = $data['group'];
+            $category = mysqli_real_escape_string($DB->connect(), $data['group']);
 
-            $url_address = strtolower($name);
+           
             $userid = $this->create_userid();
             $query = "insert into users(userid,username,category,gender,password,email	)
             values('$userid', '$name', '$category', '$gender','$psd_hash','$email')";
-            //echo $query;
-            $DB = new Database();
-            $query2 = "select * from users where email = '$email' limit 1";
             
-            
-            $DB -> save($query);
                 
             
             

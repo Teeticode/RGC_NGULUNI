@@ -3,7 +3,7 @@
     session_start();
      if(isset($_POST['react'])){
         $userid = $_SESSION['rgc_userid'];
-        $postid = $_POST['postid'];
+        $postid = mysqli_real_escape_string($DB->connect(),$_POST['postid']);
         $DB = new Database();
         $query = "SELECT postid from project_likes WHERE postid = '$postid' && userid = '$userid'";
         $result = $DB->read($query);
@@ -55,7 +55,7 @@
         $sql2 = $conn->query("SELECT * FROM project where postid = '$postid' order by `date` desc");
         while($dataRem = $sql2->fetch_assoc()){
           $reminders[] = array("postid" => $dataRem['postid'], "post" => $dataRem['post'], "image"=>addslashes($dataRem['image']),"current_user"=>$userid,
-          "date"=>date('j F Y', strtotime($dataRem['date'])));
+          "date"=>date('j F Y', strtotime($dataRem['date'])), "pdesc" => $dataRem['pdesc']);
         }
         
       }

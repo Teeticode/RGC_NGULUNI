@@ -6,7 +6,7 @@
                 $myimage = "";
                 $has_image = 0;
                 if($files['file']['name'] !== ""){
-                    $folder = "../uploads/";
+                    $folder = "./uploads/";
                     if(!file_exists($folder)){
                         mkdir($folder, 0777, true);
                     }
@@ -19,9 +19,9 @@
                 
                     $has_image = 1;
                 }
-                $ptitle = addslashes($data['ptitle']);
-                $pdesc = addslashes($data['pdesc']);
-                $category = addslashes($data['category']);
+                $ptitle = addslashes(mysqli_real_escape_string($DB->connect(),$data['ptitle']));
+                $pdesc = addslashes(mysqli_real_escape_string($DB->connect(),$data['pdesc']));
+                $category = addslashes(mysqli_real_escape_string($DB->connect(),$data['category']));
                 $postid = $this -> create_postid();
                 $query="insert into announcements(postid,userid,post,pdesc,image,has_image,category	
                 )

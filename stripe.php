@@ -36,16 +36,16 @@
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
   <!-- Nucleo Icons -->
-  <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
-  <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+  <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
   <!-- Font Awesome Icons -->
   <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-  <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+  <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
   <!-- CSS Files -->
-  <link id="pagestyle" href="../assets/css/soft-ui-dashboard.css?v=1.0.3" rel="stylesheet" />
+  <link id="pagestyle" href="./assets/css/soft-ui-dashboard.css?v=1.0.3" rel="stylesheet" />
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="../assets/css/card.css">
+<link rel="stylesheet" href="./assets/css/card.css">
 </head>
 
 <body class="g-sidenav-show  bg-gray-100">
@@ -168,131 +168,62 @@
     </nav>
     <!-- End Navbar -->
     <div class="container-fluid py-4">
+      
       <div class="row">
-        <div class="col-lg-12">
-          <div class="row">
-            <div class="col-xl-6 mb-xl-0 mb-4">
-              <div class="card bg-transparent shadow-xl">
-                <div class="overflow-hidden position-relative border-radius-xl" style="background-image: url('../assets/img/curved-images/curved14.jpg');">
-                  <span class="mask bg-gradient-dark"></span>
-                  <div class="card-body position-relative z-index-1 p-3">
-                    <i class="fas fa-wifi text-white p-2"></i>
-                    <h5 class="text-white mt-4 mb-5 pb-2">4562&nbsp;&nbsp;&nbsp;1122&nbsp;&nbsp;&nbsp;4594&nbsp;&nbsp;&nbsp;7852</h5>
-                    <div class="d-flex">
-                      <div class="d-flex">
-                        <div class="me-4">
-                          <p class="text-white text-sm opacity-8 mb-0">Card Holder</p>
-                          <h6 class="text-white mb-0">Jack Peterson</h6>
+        <div class="container">
+            <div id="Checkout" class="inline">
+                <h1>Pay Invoice</h1>
+                <div class="card-row">
+                    <span class="visa"></span>
+                    
+                </div>
+                <form>
+                    <div class="form-group">
+                        <label for="PaymentAmount">Payment amount</label>
+                        <div class="amount-placeholder">
+                            <span>$</span>
+                            <span>500.00</span>
                         </div>
-                        <div>
-                          <p class="text-white text-sm opacity-8 mb-0">Expires</p>
-                          <h6 class="text-white mb-0">11/22</h6>
+                    </div>
+                    <div class="form-group">
+                        <label or="NameOnCard">Name on card</label>
+                        <input id="NameOnCard" class="form-control" type="text" maxlength="255"></input>
+                    </div>
+                    <div class="form-group">
+                        <label for="CreditCardNumber">Card number</label>
+                        <input id="CreditCardNumber" class="null card-image form-control" type="text"></input>
+                    </div>
+                    <div class="expiry-date-group form-group">
+                        <label for="ExpiryDate">Expiry date</label>
+                        <input id="ExpiryDate" class="form-control" type="text" placeholder="MM / YY" maxlength="7"></input>
+                    </div>
+                    <div class="security-code-group form-group">
+                        <label for="SecurityCode">Security code</label>
+                        <div class="input-container" >
+                            <input id="SecurityCode" class="form-control" type="text" ></input>
+                            <i id="cvc" class="fa fa-question-circle"></i>
                         </div>
-                      </div>
-                      <div class="ms-auto w-20 d-flex align-items-end justify-content-end">
-                        <img class="w-60 mt-2" src="../assets/img/logos/mastercard.png" alt="logo">
-                      </div>
+                        <div class="cvc-preview-container two-card hide">
+                            <div class="amex-cvc-preview"></div>
+                            <div class="visa-mc-dis-cvc-preview"></div>
+                        </div>
                     </div>
-                  </div>
-                </div>
-              </div>
+                    <div class="zip-code-group form-group">
+                        <label for="ZIPCode">ZIP/Postal code</label>
+                        <div class="input-container">
+                            <input id="ZIPCode" class="form-control" type="text" maxlength="10"></input>
+                            <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="left" data-content="Enter the ZIP/Postal code for your credit card billing address."><i class="fa fa-question-circle"></i></a>
+                        </div>
+                    </div>
+                    <button id="PayButton" class="btn btn-block btn-success submit-button" type="submit">
+                        <span class="submit-button-lock"></span>
+                        <span class="align-middle">Pay $500.00</span>
+                    </button>
+                </form>
             </div>
-            <div class="col-xl-6">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="card">
-                    <div class="card-header mx-4 p-3 text-center">
-                      <div class="icon icon-shape icon-lg bg-gradient-primary shadow text-center border-radius-lg">
-                        <i class="fas fa-landmark opacity-10"></i>
-                      </div>
-                    </div>
-                    <div class="card-body pt-0 p-3 text-center">
-                      <h6 class="text-center mb-0">Salary</h6>
-                      <span class="text-xs">Belong Interactive</span>
-                      <hr class="horizontal dark my-3">
-                      <h5 class="mb-0">+$2000</h5>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6 mt-md-0 mt-4">
-                  <div class="card">
-                    <div class="card-header mx-4 p-3 text-center">
-                      <div class="icon icon-shape icon-lg bg-gradient-primary shadow text-center border-radius-lg">
-                        <i class="fab fa-paypal opacity-10"></i>
-                      </div>
-                    </div>
-                    <div class="card-body pt-0 p-3 text-center">
-                      <h6 class="text-center mb-0">Paypal</h6>
-                      <span class="text-xs">Freelance Payment</span>
-                      <hr class="horizontal dark my-3">
-                      <h5 class="mb-0">$455.00</h5>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-          </div>
         </div>
-       
       </div>
-      <div class="row">
-      <div class="container">
-  <div id="Checkout" class="inline">
-      <h1>Pay Invoice</h1>
-      <div class="card-row">
-          <span class="visa"></span>
-          <span class="mastercard"></span>
-          <span class="amex"></span>
-          <span class="discover"></span>
-      </div>
-      <form>
-          <div class="form-group">
-              <label for="PaymentAmount">Payment amount</label>
-              <div class="amount-placeholder">
-                  <span>$</span>
-                  <span>500.00</span>
-              </div>
-          </div>
-          <div class="form-group">
-              <label or="NameOnCard">Name on card</label>
-              <input id="NameOnCard" class="form-control" type="text" maxlength="255"></input>
-          </div>
-          <div class="form-group">
-              <label for="CreditCardNumber">Card number</label>
-              <input id="CreditCardNumber" class="null card-image form-control" type="text"></input>
-          </div>
-          <div class="expiry-date-group form-group">
-              <label for="ExpiryDate">Expiry date</label>
-              <input id="ExpiryDate" class="form-control" type="text" placeholder="MM / YY" maxlength="7"></input>
-          </div>
-          <div class="security-code-group form-group">
-              <label for="SecurityCode">Security code</label>
-              <div class="input-container" >
-                  <input id="SecurityCode" class="form-control" type="text" ></input>
-                  <i id="cvc" class="fa fa-question-circle"></i>
-              </div>
-              <div class="cvc-preview-container two-card hide">
-                  <div class="amex-cvc-preview"></div>
-                  <div class="visa-mc-dis-cvc-preview"></div>
-              </div>
-          </div>
-          <div class="zip-code-group form-group">
-              <label for="ZIPCode">ZIP/Postal code</label>
-              <div class="input-container">
-                  <input id="ZIPCode" class="form-control" type="text" maxlength="10"></input>
-                  <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="left" data-content="Enter the ZIP/Postal code for your credit card billing address."><i class="fa fa-question-circle"></i></a>
-              </div>
-          </div>
-          <button id="PayButton" class="btn btn-block btn-success submit-button" type="submit">
-              <span class="submit-button-lock"></span>
-              <span class="align-middle">Pay $500.00</span>
-          </button>
-      </form>
-  </div>
-</div>
-      </div>
-        </div>
+    </div>
       <footer class="footer pt-3  ">
         <div class="container-fluid">
           <div class="row align-items-center justify-content-lg-between">
@@ -302,24 +233,20 @@
                   document.write(new Date().getFullYear())
                 </script>,
                 made with <i class="fa fa-heart"></i> by
-                <a href="https://www.creative-tim.com" class="font-weight-bold" target="_blank">Creative Tim</a>
+                <a href="https://www.facebook.com/" class="font-weight-bold" target="_blank">RGC NGULUNI</a>
                 for a better web.
               </div>
             </div>
             <div class="col-lg-6">
               <ul class="nav nav-footer justify-content-center justify-content-lg-end">
-                <li class="nav-item">
-                  <a href="https://www.creative-tim.com" class="nav-link text-muted" target="_blank">Creative Tim</a>
-                </li>
+                
                 <li class="nav-item">
                   <a href="https://www.creative-tim.com/presentation" class="nav-link text-muted" target="_blank">About Us</a>
                 </li>
                 <li class="nav-item">
-                  <a href="https://creative-tim.com/blog" class="nav-link text-muted" target="_blank">Blog</a>
+                  <a href="./index.php" class="nav-link text-muted" target="_blank">Blog</a>
                 </li>
-                <li class="nav-item">
-                  <a href="https://www.creative-tim.com/license" class="nav-link pe-0 text-muted" target="_blank">License</a>
-                </li>
+                
               </ul>
             </div>
           </div>
@@ -330,11 +257,11 @@
   
   <!--   Core JS Files   -->
  
-  <script src="../assets/js/core/popper.min.js"></script>
-  <script src="../assets/js/core/bootstrap.min.js"></script>
-  <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
-  <script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
-  <script src="../assets/js/card.js"></script>
+  <script src="./assets/js/core/popper.min.js"></script>
+  <script src="./assets/js/core/bootstrap.min.js"></script>
+  <script src="./assets/js/plugins/perfect-scrollbar.min.js"></script>
+  <script src="./assets/js/plugins/smooth-scrollbar.min.js"></script>
+  <script src="./assets/js/card.js"></script>
   <script>
     var win = navigator.platform.indexOf('Win') > -1;
     if (win && document.querySelector('#sidenav-scrollbar')) {
@@ -347,7 +274,7 @@
   <!-- Github buttons -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
-  <script src="../assets/js/soft-ui-dashboard.min.js?v=1.0.3"></script>
+  <script src="./assets/js/soft-ui-dashboard.min.js?v=1.0.3"></script>
 </body>
 
 </html>

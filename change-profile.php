@@ -1,7 +1,7 @@
 
 <?php
     session_start();
-    include "../classes/autoloader2.php";
+    include "./classes/autoloader2.php";
     if(isset($_SESSION['rgc_userid']) && is_numeric($_SESSION['rgc_userid'])){
       $user_id = $_SESSION['rgc_userid'];
       $login = new Login();
@@ -39,14 +39,14 @@
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
   <!-- Nucleo Icons -->
-  <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
-  <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+  <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
   <!-- Font Awesome Icons -->
   <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-  <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+  <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
   <!-- CSS Files -->
-  <link id="pagestyle" href="../assets/css/soft-ui-dashboard.css?v=1.0.3" rel="stylesheet" />
-  <link rel="stylesheet" href="../assets/css/file.css">
+  <link id="pagestyle" href="./assets/css/soft-ui-dashboard.css?v=1.0.3" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/file.css">
 </head>
 
 <body class="g-sidenav-show bg-gray-100" >
@@ -263,7 +263,7 @@
                             if($_FILES['file']['name'] !== ""){
                               $allowed_size = (1024*1024) * 7;
                               if($_FILES['file']['size'] < $allowed_size){
-                                $folder = "../uploads/" . $user_data['userid'] . "/";
+                                $folder = "./uploads/" . $user_data['userid'] . "/";
                                 if(!file_exists($folder)){
                                   mkdir($folder, 0777, true);
                                 }
@@ -442,8 +442,8 @@
                     </div>
                     <label>Category</label>
                     <div class="mb-3">
-                        <select type="text" name="category" value="<?php echo $user_data['category'];?>" class="form-control" >
-                            <option>None</option>
+                        <select type="text" name="category" value="" class="form-control" >
+                            <option><?php echo $user_data['category'];?></option>
                             <option>Men</option>
                             <option>Women</option>
                             <option>Youth</option>
@@ -456,7 +456,7 @@
                       <Label for="file-upload" class="custom-file-upload" style="
                       <?php 
                         if($user_data['profile_pic'] ===""){
-                          echo "background-image:url('../assets/img/default-avatar.jpg');";
+                          echo "background-image:url('./assets/img/default-avatar.jpg');";
                         }else{
                           echo "background-image:url(".$user_data['profile_pic'].");";
                         }

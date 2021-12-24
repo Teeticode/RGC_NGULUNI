@@ -28,6 +28,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <title>
@@ -36,20 +37,21 @@
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
   <!-- Nucleo Icons -->
-  <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
-  <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+  <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
   <!-- Font Awesome Icons -->
   <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-  <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+  <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
   <!-- CSS Files -->
-  <link id="pagestyle" href="../assets/css/soft-ui-dashboard.css?v=1.0.3" rel="stylesheet" />
+  <link id="pagestyle" href="./assets/css/soft-ui-dashboard.css?v=1.0.3" rel="stylesheet" />
   
   <link rel="stylesheet" href="./card.css">
-  <link rel="stylesheet" href="../fontawe/css/all.css">
+  <link rel="stylesheet" href="./fontawe/css/all.css">
   
 </head>
 
 <body class="g-sidenav-show  bg-gray-100">
+
   <?php include './aside.php';?>
   <main class="main-content position-relative max-height-vh-100 h-100 mt-1 border-radius-lg ">
     <!-- Navbar -->
@@ -58,9 +60,9 @@
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
             <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a></li>
-            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Dashboard</li>
+            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Home</li>
           </ol>
-          <h6 class="font-weight-bolder mb-0">Dashboard</h6>
+          <h6 class="font-weight-bolder mb-0">Home</h6>
         </nav>
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
           <div class="ms-md-auto pe-md-3 d-flex align-items-center">
@@ -80,135 +82,115 @@
               </a>
             </li>
             
-            <li class="nav-item dropdown pe-2 d-flex align-items-center" style="margin-left:10px !important;">
-              <a href="" class="nav-link text-body p-0" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="fa fa-bell cursor-pointer"></i>
-              </a>
-              <ul style="background-color:black; margin-left:10px !important;" class="dropdown-menu  dropdown-menu-end  px-2 py-3 mx-auto me-sm-n4" aria-labelledby="dropdownMenuButton">
-                <li class="mb-2">
-                  <a class="dropdown-item border-radius-md" href="javascript:;">
-                    <div class="d-flex py-1">
-                      <div class="my-auto">
-                        <img src="../assets/img/team-2.jpg" class="avatar avatar-sm  me-3 ">
-                      </div>
-                      <div class="d-flex flex-column justify-content-center">
-                        <h6 class="text-sm font-weight-normal mb-1">
-                          <span class="font-weight-bold">New message</span> from Laur
-                        </h6>
-                        <p class="text-xs text-secondary mb-0">
-                          <i class="fa fa-clock me-1"></i>
-                          13 minutes ago
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                </li>
-                <li class="mb-2">
-                  <a class="dropdown-item border-radius-md" href="javascript:;">
-                    <div class="d-flex py-1">
-                      <div class="my-auto">
-                        <img src="../assets/img/small-logos/logo-spotify.svg" class="avatar avatar-sm bg-gradient-dark  me-3 ">
-                      </div>
-                      <div class="d-flex flex-column justify-content-center">
-                        <h6 class="text-sm font-weight-normal mb-1">
-                          <span class="font-weight-bold">New album</span> by Travis Scott
-                        </h6>
-                        <p class="text-xs text-secondary mb-0">
-                          <i class="fa fa-clock me-1"></i>
-                          1 day
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item border-radius-md" href="javascript:;">
-                    <div class="d-flex py-1">
-                      <div class="avatar avatar-sm bg-gradient-secondary  me-3  my-auto">
-                        <svg width="12px" height="12px" viewBox="0 0 43 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                          <title>credit-card</title>
-                          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                            <g transform="translate(-2169.000000, -745.000000)" fill="#FFFFFF" fill-rule="nonzero">
-                              <g transform="translate(1716.000000, 291.000000)">
-                                <g transform="translate(453.000000, 454.000000)">
-                                  <path class="color-background" d="M43,10.7482083 L43,3.58333333 C43,1.60354167 41.3964583,0 39.4166667,0 L3.58333333,0 C1.60354167,0 0,1.60354167 0,3.58333333 L0,10.7482083 L43,10.7482083 Z" opacity="0.593633743"></path>
-                                  <path class="color-background" d="M0,16.125 L0,32.25 C0,34.2297917 1.60354167,35.8333333 3.58333333,35.8333333 L39.4166667,35.8333333 C41.3964583,35.8333333 43,34.2297917 43,32.25 L43,16.125 L0,16.125 Z M19.7083333,26.875 L7.16666667,26.875 L7.16666667,23.2916667 L19.7083333,23.2916667 L19.7083333,26.875 Z M35.8333333,26.875 L28.6666667,26.875 L28.6666667,23.2916667 L35.8333333,23.2916667 L35.8333333,26.875 Z"></path>
-                                </g>
-                              </g>
-                            </g>
-                          </g>
-                        </svg>
-                      </div>
-                      <div class="d-flex flex-column justify-content-center">
-                        <h6 class="text-sm font-weight-normal mb-1">
-                          Payment successfully completed
-                        </h6>
-                        <p class="text-xs text-secondary mb-0">
-                          <i class="fa fa-clock me-1"></i>
-                          2 days
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                </li>
-              </ul>
-            </li>
+           
           </ul>
         </div>
       </div>
     </nav>
     <!-- End Navbar -->
     <div class="row mt-4">
-        <div class="col-lg-8">
-            <div class="card h-100 p-2">
-                <div class="overflow-hidden position-relative border-radius-lg bg-cover h-100" style="background-image: url('../assets/img/worship.jpg');">
-                    <span class="mask bg-gradient-dark"></span>
-                    <div class="card-body position-relative z-index-1 d-flex flex-column h-100 p-3">
-                        <h5 class="text-white font-weight-bolder mb-4 pt-2">Work with the rockets</h5>
-                        <p class="text-white">Wealth creation is an evolutionarily recent positive-sum game. It is all about who take the opportunity first Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus sint similique sunt asperiores corporis doloribus eos dignissimos soluta, unde culpa..</p>
-                        <a class="text-white text-sm font-weight-bold mb-0 icon-move-right mt-auto" href="javascript:;">
-                        Read More
-                        <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
+        <div class="col-xl-12 col-xl-12 myslides">
+          <!--Slides begin-->
+          <div class="slider">
+            <div class="slides">
+              <!--radio buttons start-->
+              <input type="radio" name="radio-btn" id="radio1">
+              <input type="radio" name="radio-btn" id="radio2">
+              <input type="radio" name="radio-btn" id="radio3">
+              <input type="radio" name="radio-btn" id="radio4">
+              <!--radio buttons end-->
+              <!--slide images begin-->
+              <div class="slide first">
+                <img src="./assets/img/slide-1.jpg" alt="">
+              </div>
+              <div class="slide">
+                <img src="./assets/img/slide-3.jpg" alt="">
+              </div>
+              <div class="slide">
+                <img src="./assets/img/slide-2.jpg" alt="">
+              </div>
+              <div class="slide">
+                <img src="./assets/img/slide-4.jpg" alt="">
+              </div>
+              <!--slide images end-->
+              <!--automatic navigation starts-->
+              <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+              </div>
+              <!--automatic navigation ends-->
             </div>
-        </div>
-        <div class="col-lg-4">
-            <div class=" h-100  m-2">
-            <div class="widget rounded" style="background-color:white; color:black;">
-                                <div class="widget-about text-center">
-                                    <h2 style="font-size:14px; text-transform:italics;">RGC NGULUNI</h2>
-                                    <p class="mb-4" style="text-align: justify;">This is Lorem ipsum dolor sit amet
-                                        consectetur adipisicing elit.
-                                        Dolores tempora accusantium culpa deleniti nesciunt repellat quisquam quos vero.
-                                        Esse itaque est optio nostrum porro quisquam nihil reprehenderit fugiat enim
-                                        non.</p>
-                                    <ul class="social-icons list-unstyled list-inline mb-0">
-                                        <li class="list-inline-item">
-                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="#"><i class="fab fa-twitter"></i></a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="#"><i class="fab fa-pinterest"></i></a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="#"><i class="fab fa-telegram-plane"></i></a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="#"><i class="far fa-envelope"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+            <!--manual navigation start-->
+            <div class="navigation-manual">
+              <label for="radio1" class="manual-btn"></label>
+              <label for="radio2" class="manual-btn"></label>
+              <label for="radio3" class="manual-btn"></label>
+              <label for="radio4" class="manual-btn"></label>
             </div>
+            <!--manual navigation ends-->
+          </div>
+          <!--Slides end-->
         </div>
     </div>
+    <section class="section-services">
+		<div class="container">
+			<div class="row justify-content-center text-center">
+				<div class="col-md-10 col-lg-8">
+					<div class="header-section">
+						<h2 class="title">Exclusive <span>Services</span></h2>
+						<p class="description">There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some injected humour</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<!-- Start Single Service -->
+				<div class="col-md-6 col-lg-4">
+					<div class="single-service">
+						<div class="part-1">
+							<i class="fab fa-500px"></i>
+							<h3 class="title">Express delivery innovative Design service</h3>
+						</div>
+						<div class="part-2">
+							<p class="description">Express delivery inno service effective logistics solution for delivery of small cargo delivery service.</p>
+							
+						</div>
+					</div>
+				</div>
+				<!-- / End Single Service -->
+				<!-- Start Single Service -->
+				<div class="col-md-6 col-lg-4">
+					<div class="single-service">
+						<div class="part-1">
+							<i class="fab fa-angellist"></i>
+							<h3 class="title">Online chat may refer to any kind communication</h3>
+						</div>
+						<div class="part-2">
+							<p class="description">Express delivery inno service effective logistics solution for delivery of small cargo delivery service.</p>
+							
+						</div>
+					</div>
+				</div>
+				<!-- / End Single Service -->
+				<!-- Start Single Service -->
+				<div class="col-md-6 col-lg-4">
+					<div class="single-service">
+						<div class="part-1">
+							<i class="fas fa-award"></i>
+							<h3 class="title">Service provider provide organizations consulting</h3>
+						</div>
+						<div class="part-2">
+							<p class="description">Express delivery inno service effective logistics solution for delivery of small cargo delivery service.</p>
+							
+						</div>
+					</div>
+				</div>
+				<!-- / End Single Service -->
+				
+			</div>
+		</div>
+	</section>
     
     <div class="site-wrapper mt-4">
         <div class="main-overlay"></div>
@@ -228,7 +210,7 @@
                       <!-- left part 1st section  -->
                     <div class="col-lg-8">
                         <div class="section-header">
-                            <h3 class="section-title">Editor's Pick</h3>
+                            <h3 class="section-title">Announcements</h3>
                         </div>
 
                         <div class="padding-30 rounded bordered">
@@ -283,11 +265,11 @@
 
                         <div class="spacer" data-height="50"></div>
 
-                        <div class="section-header">
-                            <h3 class="section-title">Latest Posts</h3>
+                        <div class="section-header mt-4">
+                            <h3 class="section-title">Projects</h3>
                         </div>
 
-                        <div class="padding-30 rounded bordered">
+                        <div class="padding-30 rounded bordered mt-4">
                             <div class="row h-100" >
                                
                                 <?php
@@ -315,7 +297,7 @@
                         
                     <!-- right part starts from here  -->
                     <div class="col-lg-4">
-                        <div class="sidebar">
+                        <div class="sidebar mt-5">
                             
                             <div class="widget rounded">
                                 <div class="widget-header text-center">
@@ -407,13 +389,23 @@
 
 
     </div>
-
-  <script type="text/javascript" src="../assets/js/jquery.min.js"></script>
-  <script type="text/javascript" src="../assets/js/core/bootstrap.min.js"></script>
-  <script type="text/javascript" src="../assets/js/core/popper.min.js"></script>
-  <script type="text/javascript" src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
-  <script type="text/javascript" src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
+    
+  </div>
+  <script type="text/javascript" src="./assets/js/jquery.min.js"></script>
+  <script type="text/javascript" src="./assets/js/core/popper.min.js"></script>
+  <script type="text/javascript" src="./assets/js/core/bootstrap.min.js"></script>
+  <script type="text/javascript" src="./assets/js/plugins/perfect-scrollbar.min.js"></script>
+  <script type="text/javascript" src="./assets/js/plugins/smooth-scrollbar.min.js"></script>
+  
   <script type="text/javascript">
+    var counter = 1;
+    setInterval(function(){
+      document.getElementById('radio' + counter).checked = true;
+      counter++;
+      if(counter > 4){
+        counter = 1;
+      } 
+    },5000);
     var win = navigator.platform.indexOf('Win') > -1;
     if (win && document.querySelector('#sidenav-scrollbar')) {
       var options = {
@@ -450,7 +442,7 @@
            response1 = response.map((res)=>{
              return $(res);
            })
-           console.log(response);
+           
            var output = ``;
           for (var i = 0; i < response.length; i++) {
             
@@ -535,10 +527,8 @@
          
           
           var pos = posty['prevObject']['prevObject'];
-          console.log(ditems.length);
-          console.log(pos.length);
-          console.log(posty['prevObject']['prevObject'][2].id);
-          console.log(pos[1].id);
+          
+          
           
             for (let i = 0; i < ditems.length; i++) {
                 $('.btnlike').find('#'+ditems[i][0].postid+'').css("color", "red"); 
@@ -702,7 +692,7 @@
   <!-- Github buttons -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
-  <script src="../assets/js/soft-ui-dashboard.min.js?v=1.0.3"></script>
+  <script src="./assets/js/soft-ui-dashboard.min.js?v=1.0.3"></script>
 </body>
 
 </html>
