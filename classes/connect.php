@@ -1,6 +1,6 @@
 <?php
     class Database{
-        private $host = "eu-cdbr-west-02.cleardb.net";
+        private $host = "mysql://eu-cdbr-west-02.cleardb.net";
         private $username = "b22974768473db";
         private $password = "3fbc4fe6";
         private $dbname = "heroku_905c59eb2484f60";
