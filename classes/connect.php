@@ -8,13 +8,13 @@
             $password = $url["pass"];
             $db = substr($url["path"], 1);
 
-            $conn = mysqli_connect($server, $username, $password, $db);
-            return $connection;
+            $conn = new mysqli($server, $username, $password, $db);
+            return $conn;
         }
 
         function read($query){
             $conn = $this -> connect();
-            $result = mysqli_query($conn, $query);
+            $result = $conn->query($query);
             
             if(!$result){
                 return false;
@@ -29,7 +29,7 @@
         
         function save($query){
             $conn = $this -> connect();
-            $result = mysqli_query($conn, $query);
+            $result = $conn->query($query);
             
             if(!$result){
                 return false;
