@@ -9,7 +9,7 @@
             
             
            
-            $connection = mysqli_connect($this->host, $this->username, $this->password, $this->dbname);
+            $connection = mysql_connect($this->host, $this->username, $this->password, $this->dbname);
             
             return $connection;
         }
