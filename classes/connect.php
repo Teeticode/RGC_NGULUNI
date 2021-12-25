@@ -1,20 +1,22 @@
 <?php
     class Database{
+        private $host = "eu-cdbr-west-02.cleardb.net";
+        private $username = "b22974768473db";
+        private $password = "3fbc4fe6";
+        private $dbname = "heroku_905c59eb2484f60";
         
         function connect(){
-            $url = parse_url(getenv("mysql://b22974768473db:3fbc4fe6@eu-cdbr-west-02.cleardb.net/heroku_905c59eb2484f60?reconnect=true"));
-            $server = $url["host"];
-            $username = $url["user"];
-            $password = $url["pass"];
-            $db = substr($url["path"], 1);
-
-            $conn = new mysqli($server, $username, $password, $db);
-            return $conn;
+            
+            
+           
+            $connection = mysqli_connect($this->host, $this->username, $this->password, $this->dbname);
+            
+            return $connection;
         }
 
         function read($query){
             $conn = $this -> connect();
-            $result = $conn->query($query);
+            $result = mysqli_query($conn, $query);
             
             if(!$result){
                 return false;
@@ -29,7 +31,7 @@
         
         function save($query){
             $conn = $this -> connect();
-            $result = $conn->query($query);
+            $result = mysqli_query($conn, $query);
             
             if(!$result){
                 return false;
