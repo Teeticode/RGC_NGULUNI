@@ -6,7 +6,7 @@
             $DB = new Database();
             $email = addslashes(mysqli_real_escape_string($DB->connect(),$data['email']));
             $psd = addslashes(mysqli_real_escape_string($DB->connect(),$data['psd']));
-            $query = "select * from users where email = '$email' limit 1"; 
+            $query = "SELECT * from users where email = '$email' limit 1"; 
             
             $DB = new Database();
             $result = $DB->read($query);

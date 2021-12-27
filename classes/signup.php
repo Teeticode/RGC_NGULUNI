@@ -65,12 +65,14 @@
 
            
             $userid = $this->create_userid();
-            $query = "INSERT INTO `users`(`userid`,`username`,`gender`,`password`,`email`,`category`	
+            $query = "INSERT INTO `users`(`userid`,`username`,`gender`,`psd`,`email`,`category`	
             )
-            values('$userid', '$name', '$gender','$psd_hash','$email','$category')";
+            VALUES('$userid', '$name', '$gender','$psd_hash','$email','$category')";
             
-                
-            
+            $result = $DB -> save($query);
+            if(!$result){
+                $this->error .= "Something went wrong !!";
+            }
             
         }
         public function evaluate_email($data){
