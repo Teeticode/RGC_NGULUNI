@@ -1,10 +1,10 @@
 <?php
     class Database{
-       
-        private $host = "eu-cdbr-west-02.cleardb.net";
-        private $username = "b6d0bfe5d90bf5";
-        private $password = "e2c584f5";
-        private $dbname = "heroku_e834b0ae94fcdca";
+       //mysql://b59ac5f6258964:f950c22e@us-cdbr-east-05.cleardb.net/heroku_ac3e6dd720c8d0b?reconnect=true
+        private $host = "us-cdbr-east-05.cleardb.net";
+        private $username = "b59ac5f6258964";
+        private $password = "f950c22e";
+        private $dbname = "heroku_ac3e6dd720c8d0b";
         /*private $host = "localhost";
         private $username = "root";
         private $password = "";
