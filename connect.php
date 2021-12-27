@@ -1,13 +1,14 @@
 <?php
     class Database{
-        private $host = "eu-cdbr-west-02.cleardb.net";
-        private $username = "b22974768473db";
-        private $password = "3fbc4fe6";
-        private $dbname = "heroku_905c59eb2484f60";
+        private $host = "f80b6byii2vwv8cx.chr7pe7iynqr.eu-west-1.rds.amazonaws.com";
+        private $username = "yoev16r8k3p835fr";
+        private $password = "taa6f470qq04zwuo";
+        private $dbname = "dkz3cdtolefx1flf";
         /*private $host = "localhost";
         private $username = "root";
         private $password = "";
         private $dbname = "rgc_dashboard";*/
+        //utf8mb4_unicode_ci
         
         function connect(){
             
