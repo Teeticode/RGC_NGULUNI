@@ -101,16 +101,16 @@
               <!--radio buttons end-->
               <!--slide images begin-->
               <div class="slide first">
-                <img src="./assets/img/slide-1.jpg" alt="">
+                <img src="./assets/img/slide-1.jpg" width="100px" height="100px" alt="">
               </div>
               <div class="slide">
-                <img src="./assets/img/slide-3.jpg" alt="">
+                <img src="./assets/img/slide-3.jpg"  width="100px" height="100px" alt="">
               </div>
               <div class="slide">
-                <img src="./assets/img/slide-2.jpg" alt="">
+                <img src="./assets/img/slide-2.jpg"  width="100px" height="100px" alt="">
               </div>
               <div class="slide">
-                <img src="./assets/img/slide-4.jpg" alt="">
+                <img src="./assets/img/slide-4.jpg"  width="100px" height="100px" alt="">
               </div>
               <!--slide images end-->
               <!--automatic navigation starts-->
@@ -139,8 +139,8 @@
 			<div class="row justify-content-center text-center">
 				<div class="col-md-10 col-lg-8">
 					<div class="header-section">
-						<h2 class="title">Exclusive <span>Services</span></h2>
-						<p class="description">There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some injected humour</p>
+						<h2 class="title">About RGC<span> NGULUNI</span></h2>
+						<p class="description">We Are a Self Purpose Driven Church</p>
 					</div>
 				</div>
 			</div>

@@ -1518,6 +1518,14 @@ footer .footer-inner .copyright {
     overflow: hidden;
    
 }
+@media(max-width:500px){
+    .slider{
+        height: 400px !important;
+    }
+    .slides{
+        height: 300px !important;
+    }
+}
 .slides{
     width: 500%;
     height: 400px;

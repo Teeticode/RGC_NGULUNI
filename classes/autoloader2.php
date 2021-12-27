@@ -1,6 +1,6 @@
 <?php
     
-    include("./classes/connect.php");
+    include("./connect.php");
     include("./classes/login.php");
     include("./classes/signup.php");
 	include("./classes/user.php");

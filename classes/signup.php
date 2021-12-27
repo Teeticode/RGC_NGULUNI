@@ -14,7 +14,7 @@
                         $key = "password";
                     }
                     if( $key == "psd2"){
-                        $key = "password 2 ";
+                        $key = "confirm password ";
                     }
                     if( $key == "usname"){
                         $key = "username";
