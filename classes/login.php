@@ -6,12 +6,12 @@
             $DB = new Database();
             $email = addslashes($data['email']);
             $psd = addslashes($data['psd']);
-            $query = "SELECT * from `users` where `email` = '$email' limit 1"; 
+            $query = "SELECT * from `users` WHERE `email` = '$email' limit 1"; 
             
       
             $result = $DB->read($query);
             if($result){
-                $row = $result;
+                $row = $result[0];
                
                 if($this-> hash_text($psd) === $row['psd']){
                     $_SESSION['rgc_userid'] = $row['userid'];
