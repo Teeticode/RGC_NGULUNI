@@ -65,7 +65,7 @@
 
            
             $userid = $this->create_userid();
-            $query = "insert into users(userid,username,gender,password,email,category	
+            $query = "INSERT INTO `users`(`userid`,`username`,`gender`,`password`,`email`,`category`	
             )
             values('$userid', '$name', '$gender','$psd_hash','$email','$category')";
             
@@ -74,7 +74,7 @@
             
         }
         public function evaluate_email($data){
-            $query2 = "select * from users where email = '$data' limit 1";
+            $query2 = "SELECT * from users where email = '$data' limit 1";
             $DB2 = new Database();
             $resulte = $DB2->read($query2);
             if($resulte){
