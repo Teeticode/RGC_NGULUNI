@@ -398,14 +398,7 @@
   <script type="text/javascript" src="./assets/js/plugins/smooth-scrollbar.min.js"></script>
   
   <script type="text/javascript">
-    var counter = 1;
-    setInterval(function(){
-      document.getElementById('radio' + counter).checked = true;
-      counter++;
-      if(counter > 4){
-        counter = 1;
-      } 
-    },5000);
+    
     var win = navigator.platform.indexOf('Win') > -1;
     if (win && document.querySelector('#sidenav-scrollbar')) {
       var options = {
@@ -415,8 +408,15 @@
     }
   </script>
   <script type="text/javascript">
-
-      $(document).ready(function(){
+    var counter = 1;
+    setInterval(function(){
+      document.getElementById('radio' + counter).checked = true;
+      counter++;
+      if(counter > 4){
+        counter = 1;
+      } 
+    },5000);
+    $(document).ready(function(){
          getAllUserReactions();
          setInterval(() => {
            getAllReminders();
@@ -657,35 +657,7 @@
     });
   }
 
-  function confirmRefresh(){
-    var okToRefresh = confirm("The Post has been deleted!!");
-    if(okToRefresh){
-      setTimeout("location.reload(true);", 1500);
-    }
-  }
-  function storePagePosition(){
-    var page_Y = window.pageYOffset;
-    localStorage.setItem("page_y", page_Y);
-  }
   
-  function confirmRem(){
-    var okToRefresh = confirm("Added To your Reminders!!");
-    if(okToRefresh){
-      window.addEventListener("scroll", storePagePosition);
-      var currentPageY;
-      try{
-          currentPageY = localStorage.getItem("page_y");
-          if(currentPageY === undefined){
-            localStorage.setItem("page_y") = 0;
-          }
-          window.scrollTo(0, currentPageY);
-        }catch(e){
-          console.log(e);
-        }
-    }
-  }
-  
-
   
    
   </script>
