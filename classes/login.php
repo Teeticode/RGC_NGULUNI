@@ -4,8 +4,8 @@
         private $error = "";
         public function evaluate($data){
             $DB = new Database();
-            $email = addslashes(mysqli_real_escape_string($DB->connect(),$data['email']));
-            $psd = addslashes(mysqli_real_escape_string($DB->connect(),$data['psd']));
+            $email = addslashes($data['email']);
+            $psd = addslashes($data['psd']);
             $query = "SELECT * from users where email = '$email' limit 1"; 
             
             $DB = new Database();
