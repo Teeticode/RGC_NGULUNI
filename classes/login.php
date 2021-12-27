@@ -6,16 +6,15 @@
             $DB = new Database();
             $email = addslashes($data['email']);
             $psd = addslashes($data['psd']);
-            $query = "SELECT * from users where email = '$email' limit 1"; 
+            $query = "SELECT * from `users` where `email` = '$email' limit 1"; 
             
-            $DB = new Database();
+      
             $result = $DB->read($query);
             if($result){
                 $row = $result[0];
                
                 if($this-> hash_text($psd) == $row['password']){
                     $_SESSION['rgc_userid'] = $row['userid'];
-
                 }else{
                     $this->error .= "Wrong email or password<br>";
                 }
