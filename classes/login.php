@@ -13,7 +13,7 @@
             if($result){
                 $row = $result[0];
                
-                if($this-> hash_text($psd) === $row['password']){
+                if($this-> hash_text($psd) == $row['password']){
                     $_SESSION['rgc_userid'] = $row['userid'];
 
                 }else{
