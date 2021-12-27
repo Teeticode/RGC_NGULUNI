@@ -65,8 +65,9 @@
 
            
             $userid = $this->create_userid();
-            $query = "insert into users(userid,username,category,gender,password,email	)
-            values('$userid', '$name', '$category', '$gender','$psd_hash','$email')";
+            $query = "insert into users(userid,username,gender,password,email,category	
+            )
+            values('$userid', '$name', '$gender','$psd_hash','$email','$category')";
             
                 
             
