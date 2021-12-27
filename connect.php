@@ -1,9 +1,10 @@
 <?php
     class Database{
-        private $host = "f80b6byii2vwv8cx.chr7pe7iynqr.eu-west-1.rds.amazonaws.com";
-        private $username = "yoev16r8k3p835fr";
-        private $password = "taa6f470qq04zwuo";
-        private $dbname = "dkz3cdtolefx1flf";
+       
+        private $host = "eu-cdbr-west-02.cleardb.net";
+        private $username = "b6d0bfe5d90bf5";
+        private $password = "e2c584f5";
+        private $dbname = "heroku_e834b0ae94fcdca";
         /*private $host = "localhost";
         private $username = "root";
         private $password = "";
