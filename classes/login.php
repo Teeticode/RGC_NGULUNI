@@ -11,7 +11,7 @@
       
             $result = $DB->read($query);
             if($result){
-                $row = $result[0];
+                $row = $result;
                
                 if($this-> hash_text($psd) == $row['password']){
                     $_SESSION['rgc_userid'] = $row['userid'];
