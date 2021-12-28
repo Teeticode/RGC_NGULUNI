@@ -98,7 +98,7 @@
                         </div>";
                         
                       }else{
-                        header("Location:./index.php");
+                        header("Location:./profile.php");
                         die;
                       }
                     }
