@@ -29,7 +29,7 @@
                 values('$postid', '$userid', '$ptitle', '$pdesc','$myimage', '$has_image', '$category')";
                 
                 $result = $DB->save($query);
-                if(!$result){
+                if($result){
                     $this->error .= "Shida iko hapa";
                 }
             }else{
