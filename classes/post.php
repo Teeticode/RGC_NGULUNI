@@ -28,18 +28,17 @@
                              
 
                 }
-                    $DB =  new Database();
-                    $ptitle = addslashes($data['ptitle']);
-                    $pdesc = addslashes($data['pdesc']);
-                    $category = addslashes($data['category']);
-                    $postid = $this -> create_postid();
-                    $query1="INSERT INTO project(`postid`,`userid`,`post`,`pdesc`,`image`,`has_image`,`category`	
-                    )
-                    values('$postid', '$userid', '$ptitle', '$pdesc','$myimage', '$has_image', '$category')";
-               
-                    $DB->save($query1);
-                
-               
+                $DB =  new Database();
+                $ptitle = addslashes(mysqli_real_escape_string($DB->connect(),$data['ptitle']));
+                $pdesc = addslashes(mysqli_real_escape_string($DB->connect(),$data['pdesc']));
+                $category = addslashes(mysqli_real_escape_string($DB->connect(),$data['category']));
+                $postid = $this -> create_postid();
+                $query1="INSERT INTO `project`(`postid`,`userid`,`post`,`pdesc`,`image`,`has_image`,`category`)
+                VALUES('$postid', '$userid', '$ptitle', '$pdesc','$myimage', '$has_image', '$category')";
+                $result = $DB->save($query1);
+                if(!$result){
+                    $this->error .= "Something went wrong !!";
+                }
             }else{
                 $this -> error .= "Please Post Something! yoo <br>";
             }
