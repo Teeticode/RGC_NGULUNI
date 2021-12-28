@@ -137,13 +137,6 @@
             <form role="text-left" method="POST" enctype="multipart/form-data">
                 <?php
                     if($_SERVER['REQUEST_METHOD'] == "POST"){
-                       
-                    
-                 
-                            
-                       
-                             
-
                         $userid = $_SESSION['rgc_userid'];
                         $ann = new Announcement();
                         $result = $ann->create_post($userid, $_POST, $_FILES);

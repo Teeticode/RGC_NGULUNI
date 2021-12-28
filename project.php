@@ -208,14 +208,7 @@
             <div class="card-body p-3">
             <form role="text-left" method="POST" enctype="multipart/form-data">
                 <?php
-                    if($_SERVER['REQUEST_METHOD'] == "POST"){
-                       
-                    
-                 
-                            
-                       
-                             
-
+                    if($_SERVER['REQUEST_METHOD'] === "POST"){
                         $userid = $_SESSION['rgc_userid'];
                         $project = new Post();
                         $result = $project->create_post($userid, $_POST, $_FILES);

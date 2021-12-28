@@ -19,15 +19,19 @@
                 
                     $has_image = 1;
                 }
+                $DB = new Database();
                 $ptitle = addslashes(mysqli_real_escape_string($DB->connect(),$data['ptitle']));
                 $pdesc = addslashes(mysqli_real_escape_string($DB->connect(),$data['pdesc']));
                 $category = addslashes(mysqli_real_escape_string($DB->connect(),$data['category']));
-                $postid = $this -> create_postid();
-                $query="insert into announcements(postid,userid,post,pdesc,image,has_image,category	
+                $postid = $this -> create_postid(); 
+                $query="INSERT INTO announcements(`postid`,`userid`,`post`,`pdesc`,`image`,`has_image`,`category`	
                 )
                 values('$postid', '$userid', '$ptitle', '$pdesc','$myimage', '$has_image', '$category')";
-                $DB = new Database();
-                $DB->save($query);
+                
+                $result = $DB->save($query);
+                if(!$result){
+                    $this->error .= "Shida iko hapa";
+                }
             }else{
                 $this->error .= "Please Post Something!!<br>";
             }
