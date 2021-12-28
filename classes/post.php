@@ -7,26 +7,18 @@
                 $has_image = 0;
                 
                 if($_FILES['file']['name'] !== "" ){
-                  
+                    $folder = "./uploads/";
+                    if(!file_exists($folder)){
+                        mkdir($folder, 0777, true);
+                    }
+                    $image_class = new Image();
+                    $myimage = $folder . $image_class -> generate_file_name(15) . ".jpg";
                     
-                        $folder = "./uploads/";
-                        if(!file_exists($folder)){
-                            mkdir($folder, 0777, true);
-                        }
-                        $image_class = new Image();
-                        $myimage = $folder . $image_class -> generate_file_name(15) . ".jpg";
-                        
-                        move_uploaded_file($_FILES['file']['tmp_name'], $myimage);
-                        
-                        $image_class -> crop_image($myimage, $myimage, 600, 600 );
+                    move_uploaded_file($_FILES['file']['tmp_name'], $myimage);
                     
-                        $has_image = 1;
-                    
-                 
-                            
-                       
-                             
-
+                    $image_class -> crop_image($myimage, $myimage, 600, 600 );
+                
+                    $has_image = 1;
                 }
                 $DB =  new Database();
                 $ptitle = addslashes(mysqli_real_escape_string($DB->connect(),$data['ptitle']));
