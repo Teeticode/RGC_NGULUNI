@@ -1,16 +1,16 @@
 <?php
     class Database{
        //mysql://b59ac5f6258964:f950c22e@us-cdbr-east-05.cleardb.net/heroku_ac3e6dd720c8d0b?reconnect=true
-        private $host = "us-cdbr-east-05.cleardb.net";
-        private $username = "b59ac5f6258964";
-        private $password = "f950c22e";
-        private $dbname = "heroku_ac3e6dd720c8d0b";
+        private $host = "app-d520cd59-f645-41df-9e13-0716efa621d7-do-user-10517657-0.b.db.ondigitalocean.com";
+        private $username = "mysql";
+        private $password = "zZVHH1gp0QQdqrW2";
+        private $dbname = "mysql";
         /*private $host = "localhost";
         private $username = "root";
         private $password = "";
         private $dbname = "rgc_dashboard";*/
         //utf8mb4_unicode_ci
-        
+
         function connect(){
             
             
