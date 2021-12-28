@@ -28,14 +28,15 @@
                              
 
                 }
-                    $ptitle = addslashes($data['ptitle']);
-                    $pdesc = addslashes($data['pdesc']);
-                    $category = $data['category'];
+                    $DB =  new Database();
+                    $ptitle = addslashes(mysqli_real_escape_string($DB->connect(),$data['ptitle']));
+                    $pdesc = addslashes(mysqli_real_escape_string($DB->connect(),$data['pdesc']));
+                    $category = addslashes(mysqli_real_escape_string($DB->connect(),$data['category']));
                     $postid = $this -> create_postid();
                     $query="INSERT INTO project(`postid`,`userid`,`post`,`pdesc`,`image`,`has_image`,`category`	
                     )
                     values('$postid', '$userid', '$ptitle', '$pdesc','$myimage', '$has_image', '$category')";
-                    $DB = new Database();
+               
                     $DB->save($query);
                 
                
